@@ -1,0 +1,481 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    
+    /* Background Image */
+    background-image: url('media/hungary_zaszlo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Container */
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Logo Container */
+.image-container {
+    position: absolute;
+    top: -50px;
+    left: 50px;
+    right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100px;
+    height: auto;
+}
+
+/* Hide the second logo on mobile devices */
+@media (max-width: 768px) {
+    .image-container img:last-child {
+        display: none;
+    }
+    .image-container {
+        justify-content: flex-start;
+    }
+}
+
+/* Main Title */
+.hungary-title {
+    text-align: center;
+    font-size: 5.5em;
+    margin: 80px 0 30px 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    white-space: nowrap; /* Prevent line breaks */
+    text-shadow: 5px -5px 5px rgba(0, 0, 0, 0.6); /* X-offset, Y-offset, Blur-radius, Color */
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #ca5757; /* Piros háttérszín */
+    border-radius: 5px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff; /* Fehér szöveg */
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 3px;
+}
+
+nav ul li a:hover {
+    background-color: #388e3c; /* Zöld háttérszín hover állapotban */
+    color: #ffffff; /* Fehér szöveg hover állapotban */
+}
+/* Active Link (Current Page) */
+nav ul li a.active {
+    background-color: #e63946; /* Gazdag vörös háttérszín az aktív linkhez */
+    color: #ffffff; /* Fehér szövegszín az aktív linkhez */
+    font-weight: bold; /* Bold betűstílus az aktív linkhez */
+    border-radius: 5px; /* Lekerekített sarkok az aktív linkhez */
+    padding: 15px 20px; /* Az aktív linkhez hasonlóan igazított padding */
+}
+
+/* Responsive Navigation */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    .hungary-title
+    {
+            font-size: 3.5em;
+    }
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #f14e32;
+        border-radius: 0;
+        box-shadow: none;
+        transform: translateY(-200%);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    nav.active {
+        transform: translateY(0);
+    }
+    .center-image img {
+        max-width: 90%; /* Kisebb eszközöknél kisebb szélesség, hogy illeszkedjen */
+    }
+
+    .center-image figcaption {
+        font-size: 0.9rem; /* Kisebb betűméret mobilon */
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 15px 0;
+    }
+    
+    /* Responsive Styles */
+    .content-wrapper {
+        flex-direction: column; /* Stacks the image below the text on smaller screens */
+        align-items: center; /* Centers items horizontally */
+    }
+
+    .content-wrapper p {
+        text-align: center; /* Centers text below the image */
+        width: 100%; /* Ensures the text takes full width */
+    }
+
+    .image-wrapperr {
+        text-align: center; /* Centers the image below the text */
+        margin-top: 20px; /* Adds space above the image */
+    }
+
+    .image-wrapperr img {
+        max-width: 100%; /* Makes the image responsive */
+        height: auto; /* Maintains aspect ratio */
+    }
+    .image-new-wrapper {
+        text-align: center; /* Centers the image below the text */
+        margin-top: 20px; /* Adds space above the image */
+    }
+
+    .image-new-wrapper img {
+        max-width: 100%; /* Makes the image responsive */
+        height: auto; /* Maintains aspect ratio */
+    }
+}
+
+/* Headings */
+h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #1860be;
+    margin: 30px 0 20px 0;
+}
+
+h3 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #c41515;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #1a8fa3;
+    margin-bottom: 20px;
+}
+h5 {
+    font-size: 1.5em; /* Nagyobb betűméret a jobb láthatóság érdekében */
+    font-weight: bold; /* Fekete betűsúly a kiemeléshez */
+    text-align: center; /* Középre igazított szöveg */
+    color: #6f4f28; /* Szürkés-barna szövegszín */
+    background-color: #f5f5f5; /* Halvány szürke háttérszín */
+    border: 2px solid #6f4f28; /* Szürkés-barna szegély */
+    border-radius: 10px; /* Lekerekített sarkok */
+    padding: 10px 20px; /* Belső térköz hozzáadása */
+    margin: 20px 0; /* Margó a cím körül */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Árnyék a kiemeléshez */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Szöveg árnyékolás */
+    font-family: 'Georgia', serif; /* Elegánsabb betűtípus */
+    letter-spacing: 1px; /* Betűköz a szövegek között */
+    line-height: 1.4; /* Sor magasság növelése */
+}
+
+/* Gallery Container */
+.image-gallery {
+    display: flex; /* Flexbox elrendezés */
+    justify-content: space-between; /* Egyenletes távolság a képek között */
+    gap: 10px; /* Opciósan: távolság a képek között */
+    margin-bottom: 30px; /* Alsó margó a galéria alatt */
+}
+
+.image-gallery img {
+    flex: 1 1 30%; /* Szélesség: 30%, azaz a képek 30%-ot foglalnak el */
+    max-width: 30%; /* Maximális szélesség beállítása */
+    height: auto; /* Az arányok megtartása */
+    border-radius: 8px; /* Opciósan: lekerekített sarkok */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Opciósan: árnyék a képek alatt */
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    align-items: flex-start; /* Aligns items at the top */
+    justify-content: space-between; /* Places text and image on opposite sides */
+    gap: 20px; /* Space between text and image */
+    margin-bottom: 30px;
+}
+
+.content-wrapper p {
+    flex: 1; /* Takes up 50% of the width */
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify; /* Justifies text for a cleaner look */
+    margin: 0; /* Remove default margin */
+}
+
+.image-wrapper, .image-wrapperr, .image-new-wrapper {
+    flex: 1; /* Takes up 50% of the width */
+}
+
+.image-wrapper img, .image-wrapperr img {
+    max-width: 90%; /* Makes the image responsive */
+    height: auto; /* Maintains the image's aspect ratio */
+    display: block; /* Ensures the image is treated as a block-level element */
+    margin: 0 auto; /* Centers the image horizontally */
+    text-align: center;
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for a polished look */
+}
+
+
+/* New Image Wrapper for the "Parliament" section */
+.image-new-wrapper {
+    text-align: left; /* Aligns the image to the left */
+    margin: 0; /* Remove margin */
+}
+
+.image-new-wrapper img {
+    max-width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for better visibility */
+}
+
+/* Paragraphs */
+p {
+    color:#bbb;
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-weight: bold;
+}
+
+/* Emphasized Paragraph */
+.emphasized {
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Colored Letters in Title */
+.red {
+    color: #D32F2F;
+}
+
+.white {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.green {
+    color: #388E3C;
+}
+
+/* Links in Content */
+a {
+    color: #1860be;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    border-bottom: 2px solid #1860be;
+}
+/* Slider Container */
+.slider-container {
+    position: relative;
+    width: 80%; /* Adjust as needed for the desired size */
+    max-width: 800px; /* Maximum width */
+    margin: auto; /* Center alignment */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow */
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+    width: 100%; /* Full width of the container */
+}
+
+/* Slider Images */
+.slider img {
+    width: 100%; /* Ensure each image takes full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container, cropping if necessary */
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Szekció a képeknek */
+section.mountain-images {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px; /* Belső margó */
+    border-radius: 10px; /* Lekerekített sarkok */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék */
+    margin-bottom: 40px; /* Margó az alján */
+    text-align: center; /* Középre igazítja a tartalmat */
+}
+
+.mountain-images h5 {
+    color: #6f4f28; /* Szürkés-barna szín */
+    margin-bottom: 20px; /* Margó a cím alá */
+}
+
+/* Képek stílusa a galériában */
+.gallery {
+    display: flex; /* Flexbox a képek egymás melletti elhelyezéséhez */
+    justify-content: center; /* Középre igazítja a képeket */
+    flex-wrap: wrap; /* Ha több képet adunk hozzá, a következő sorra lépnek */
+}
+
+.gallery-item {
+    width: 300px; /* Kép szélessége */
+    height: 200px; /* Kép magassága */
+    object-fit: cover; /* Kép tartalmának vágása a megadott méretre torzulás nélkül */
+    border: 5px solid #6f4f28; /* Szürkés-barna szegély a képeken */
+    border-radius: 10px; /* Lekerekített sarkok */
+    margin: 10px; /* Margó hozzáadása a képek köré */
+    cursor: pointer; /* Mutató ujjal jelezve kattinthatóság */
+}
+
+/* Modális ablak stílusai */
+.modal {
+    display: none; /* Alapértelmezett rejtett */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); /* Fekete háttér átlátszósággal */
+    justify-content: center; /* Képek középre igazítása */
+    align-items: center; /* Képek középre igazítása */
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Kép középre igazítása és név hozzáadása */
+.center-image {
+    text-align: center; /* Középre igazítja a tartalmat */
+    margin: 20px auto; /* Margót ad a kép köré, középre igazítva */
+}
+
+.center-image img {
+    width: 900px; /* Fix szélesség */
+    height: auto; /* Magasság automatikusan állítva a szélességhez */
+    border-radius: 8px; /* Lekerekített sarkok */
+    display: block; /* Blokk elemként kezeljük a képeket a középre igazításhoz */
+    margin: 0 auto; /* Kép középre igazítása */
+}
+
+
+.center-image figcaption {
+    font-size: 1.2em; /* Név méretének beállítása */
+    color: #6685da; /* Szöveg színe */
+    margin-top: 10px; /* Margó a kép és a név között */
+}
